@@ -274,7 +274,7 @@ const response = await fetch(`${urlEndpoint}/users/message`, {
 	method: "GET",
 	headers: {
 		"Content-Type": "application/json",
-		[process.env.REACT_APP_TOKEN_HEADER_KEY]: userToken
+		[process.env.REACT_APP_TOKEN_HEADER_KEY]: auth.userToken
 	},
 });
 ```
