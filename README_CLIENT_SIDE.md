@@ -60,7 +60,7 @@ const AuthContext = createContext();
 */
 export const AuthProvider = ({ children }) => {
   const [userToken, setUserToken] = useState(null);
-	const [userEmail, setUserEmail] = useState("")
+  const [userEmail, setUserEmail] = useState("")
   const [isAuthLoading, setIsAuthLoading] = useState(false);
 
   useEffect(() => {
@@ -96,8 +96,8 @@ export const AuthProvider = ({ children }) => {
   const logout = async () => {
     setIsAuthLoading(true);
     await removeLSUserData(); // This has to be awaited for the useEffect to work
-		setUserToken(null);
-		setUserEmail("");
+    setUserToken(null);
+    setUserEmail("");
     setIsAuthLoading(false);
   };
 
@@ -109,7 +109,7 @@ export const AuthProvider = ({ children }) => {
   const value = useMemo(
     () => ({
       userToken,
-			userEmail,
+      userEmail,
       login,
       logout,
       register,
